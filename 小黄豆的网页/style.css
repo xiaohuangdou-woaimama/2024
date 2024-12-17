@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.gallery-grid img,
+.gallery-grid video {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+.gallery-grid img:hover,
+.gallery-grid video:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: #666;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content ul {
+    list-style-position: inside;
+    margin: 1rem 0;
+}
+
+.about-content ul li {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    background-color: #fff5e6;
+    border-radius: 20px;
+    border-left: 4px solid #ffd700;
+    transition: transform 0.3s ease;
+}
+
+.about-content ul li:hover {
+    transform: translateX(10px);
+    background-color: #fff0d9;
+}
+
+.about-content p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.portfolio-item {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: 2rem auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dots {
+    text-align: center;
+    padding: 1rem;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.current-time {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin: 1rem 0;
+    background-color: #f5f5f5;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#clock {
+    font-weight: bold;
+    color: #333;
+}
